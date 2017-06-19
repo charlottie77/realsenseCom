@@ -42,7 +42,6 @@ namespace DF_FaceTracking.cs
             PoseData fPose = face.QueryPose();
             ExpressionsData fExpression = face.QueryExpressions();
 
-
             fDetection.QueryBoundingRect(out box_rect);
             box_x = box_rect.x;
             box_y = box_rect.y;
@@ -78,13 +77,52 @@ namespace DF_FaceTracking.cs
             pose_q_z = pq.z;
 
             //query expression data
-            //FaceExpressionResult fer = new FaceExpressionResult();
-            //fExpression.QueryExpression(ExpressionsData.FaceExpression.EXPRESSION_BROW_LOWERER_LEFT, out fer);
+            Type expressionType = typeof(FaceExpression);
+            FaceExpressionResult fer = new FaceExpressionResult();
+
+            foreach(string s in Enum.GetNames(expressionType))
+            {
+                //Type typeIndex = typeof(FaceExpression);
+                FaceExpression typeIndex = (FaceExpression)Enum.Parse(expressionType, s);
+                //fExpression.QueryExpression(ExpressionsData.FaceExpression.EXPRESSION_BROW_LOWERER_LEFT, out fer);
+                fExpression.QueryExpression(typeIndex, out fer);
+               // Console.WriteLine(s + ".." + fer.intensity);
+
+                int value;
+                if (expressions.TryGetValue(s, out value))
+                {
+                    //modify
+                    expressions[s] = fer.intensity;
+                }
+                else
+                {
+                    //add
+                    expressions.Add(s, fer.intensity);
+                }
+                //foreach (var item in expressions)
+                //{
+                //    
+                //    if(!expressions.TryGetValue(item.Key.ToString(), out value))
+                //    {
+                //        //expressions.Add();
+                //    }
+                //}
+            }
+
+
+
+
+            //enum faceExps = new FaceExpression();
+            //foreach (string s in Enum.GetNames(FaceExpression))
+            //{
+
+            //}
+
+
+
             //expressions.Add(FaceExpression.EXPRESSION_BROW_LOWERER_LEFT.ToString(), fer.intensity);
-
-
-            
-      
         }
     }
 }
+
+

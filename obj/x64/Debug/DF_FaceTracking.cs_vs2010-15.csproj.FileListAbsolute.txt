@@ -20,3 +20,15 @@ C:\Users\CityScope\Desktop\DF_FaceTracking.cs\obj\x64\Debug\DF_FaceTracking.cs.P
 C:\Users\CityScope\Desktop\DF_FaceTracking.cs\obj\x64\Debug\DF_FaceTracking.cs_vs2010-15.csproj.GenerateResource.Cache
 C:\Users\CityScope\Desktop\DF_FaceTracking.cs\bin\x64\Debug\Newtonsoft.Json.dll
 C:\Users\CityScope\Desktop\DF_FaceTracking.cs\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\CityScope\Documents\work\realsenseCom\bin\x64\Debug\DF_FaceTracking.cs.exe.config
+C:\Users\CityScope\Documents\work\realsenseCom\obj\x64\Debug\DF_FaceTracking.cs.exe
+C:\Users\CityScope\Documents\work\realsenseCom\obj\x64\Debug\DF_FaceTracking.cs.pdb
+C:\Users\CityScope\Documents\work\realsenseCom\bin\x64\Debug\DF_FaceTracking.cs.exe
+C:\Users\CityScope\Documents\work\realsenseCom\bin\x64\Debug\DF_FaceTracking.cs.pdb
+C:\Users\CityScope\Documents\work\realsenseCom\bin\x64\Debug\libpxcclr.cs.dll
+C:\Users\CityScope\Documents\work\realsenseCom\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\CityScope\Documents\work\realsenseCom\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\CityScope\Documents\work\realsenseCom\obj\x64\Debug\DF_FaceTracking.cs_vs2010-15.csprojResolveAssemblyReference.cache
+C:\Users\CityScope\Documents\work\realsenseCom\obj\x64\Debug\DF_FaceTracking.cs.MainForm.resources
+C:\Users\CityScope\Documents\work\realsenseCom\obj\x64\Debug\DF_FaceTracking.cs.Properties.Resources.resources
+C:\Users\CityScope\Documents\work\realsenseCom\obj\x64\Debug\DF_FaceTracking.cs_vs2010-15.csproj.GenerateResource.Cache
