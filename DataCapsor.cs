@@ -25,6 +25,14 @@ namespace DF_FaceTracking.cs
         //face expression data
         public Dictionary<string, int> expressions = new Dictionary<string, int>();
 
+        //face pulse data
+        public float heartRate;
+
+        //face gaze tracking
+        public Single gazePoint_x, gazePoint_y;
+        public int gaze_confi;
+        public float g_hor_ang, g_ver_ang;
+
         public DataCapsor()
         {
             this._face = null;
@@ -41,6 +49,7 @@ namespace DF_FaceTracking.cs
             DetectionData fDetection = face.QueryDetection();
             PoseData fPose = face.QueryPose();
             ExpressionsData fExpression = face.QueryExpressions();
+            GazeData fGaze = face.QueryGaze();
 
             fDetection.QueryBoundingRect(out box_rect);
             box_x = box_rect.x;
@@ -82,7 +91,7 @@ namespace DF_FaceTracking.cs
 
             foreach(string s in Enum.GetNames(expressionType))
             {
-                //Type typeIndex = typeof(FaceExpression);
+               
                 FaceExpression typeIndex = (FaceExpression)Enum.Parse(expressionType, s);
                 //fExpression.QueryExpression(ExpressionsData.FaceExpression.EXPRESSION_BROW_LOWERER_LEFT, out fer);
                 fExpression.QueryExpression(typeIndex, out fer);
@@ -99,28 +108,32 @@ namespace DF_FaceTracking.cs
                     //add
                     expressions.Add(s, fer.intensity);
                 }
-                //foreach (var item in expressions)
-                //{
-                //    
-                //    if(!expressions.TryGetValue(item.Key.ToString(), out value))
-                //    {
-                //        //expressions.Add();
-                //    }
-                //}
+                
             }
+            //query pulse 
+            PulseData fPulse = face.QueryPulse();
+            if(fPulse != null)
+            {
+                Console.WriteLine("pulsed");
+                heartRate = fPulse.QueryHeartRate();
+            }
+            
 
+            //query gaze 
+            if(fGaze != null)
+            {
+                Console.WriteLine("gazed!");
+                gazePoint_x = fGaze.QueryGazePoint().screenPoint.x;
+                gazePoint_y = fGaze.QueryGazePoint().screenPoint.y;
 
+                gaze_confi = fGaze.QueryGazePoint().confidence;
 
+                g_hor_ang = (float)fGaze.QueryGazeHorizontalAngle();
+                g_ver_ang = (float)fGaze.QueryGazeVerticalAngle();
+            }
+            
 
-            //enum faceExps = new FaceExpression();
-            //foreach (string s in Enum.GetNames(FaceExpression))
-            //{
-
-            //}
-
-
-
-            //expressions.Add(FaceExpression.EXPRESSION_BROW_LOWERER_LEFT.ToString(), fer.intensity);
+            
         }
     }
 }
