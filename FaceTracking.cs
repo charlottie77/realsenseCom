@@ -264,7 +264,8 @@ namespace DF_FaceTracking.cs
                         }
                         pp.ReleaseFrame();
                     }
-
+                    //port stopped
+                    PortChat.Quit();
                 }
 
    //             moduleConfiguration.UnsubscribeAlert(FaceAlertHandler);

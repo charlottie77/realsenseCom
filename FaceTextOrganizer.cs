@@ -96,24 +96,6 @@ namespace DF_FaceTracking.cs
 
             PXCMFaceData.DetectionData  fdetectionData = face.QueryDetection();
             //PXCMFaceData.ExpressionsData fexpressionsData = face.QueryExpressions();
-
-            ExpressionsData fexpressionsData = face.QueryExpressions();
-            if (fexpressionsData != null)
-            {
-       
-                //Dictionary<FaceExpression, FaceExpressionResult> score = fexpressionsData.QueryExpression(FaceExpression, out this)
-                //ExpressionResults fexpressRes0;
-                //fexpressionsData.QueryExpression(FaceExpression.EXPRESSION_SMILE, out fexpressRes0);
-                //string output = JsonConvert.SerializeObject(fexpressRes0);
-                //Console.WriteLine(output);
-
-                //DataContractJsonSerializer json = new DataContractJsonSerializer(fdetectionData.GetType());
-                //MemoryStream ms = new MemoryStream();
-                //json.WriteObject(ms, fdetectionData);
-                //Console.WriteLine(ms.ToArray());
-
-                //Console.WriteLine(fexpressRes0.intensity);
-            }
             
             m_color = m_colorList[faceIndex % m_colorList.Length];
 

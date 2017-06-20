@@ -12,51 +12,92 @@ namespace DF_FaceTracking.cs
         static bool _continue;
         static SerialPort _serialPort;
         static int count = 0;
+        public static Thread readThread = new Thread(Read);
 
         public static void start()
         {
             //string name;
-            string message = "Notatall\n";
+            //string message = "Notatall\n";
             //int message = 2;
             StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
-            Thread readThread = new Thread(Read);
+           
 
             // Create a new SerialPort object with default settings.
             _serialPort = new SerialPort();
 
-            // Allow the user to set the appropriate properties.
-            _serialPort.PortName = SetPortName("COM5");
-            _serialPort.BaudRate = SetPortBaudRate(_serialPort.BaudRate);
+            //Allow the user to set the appropriate properties.
+            _serialPort.PortName = SetPortName("COM7");
+            _serialPort.BaudRate = SetPortBaudRate(9600);
             _serialPort.Parity = SetPortParity(_serialPort.Parity);
-            _serialPort.DataBits = SetPortDataBits(_serialPort.DataBits);
+            _serialPort.DataBits = SetPortDataBits(8);
             _serialPort.StopBits = SetPortStopBits(_serialPort.StopBits);
             _serialPort.Handshake = SetPortHandshake(_serialPort.Handshake);
 
+            //_serialPort.PortName = SetPortName("COM7");
+            //_serialPort.BaudRate = SetPortBaudRate(_serialPort.BaudRate);
+            //_serialPort.Parity = SetPortParity(_serialPort.Parity);
+            //_serialPort.DataBits = SetPortDataBits(_serialPort.DataBits);
+            //_serialPort.StopBits = SetPortStopBits(_serialPort.StopBits);
+            //_serialPort.Handshake = SetPortHandshake(_serialPort.Handshake);
+
             // Set the read/write timeouts
-            _serialPort.ReadTimeout = 10500;
-            _serialPort.WriteTimeout = 500;
+           // _serialPort.ReadTimeout = 2500;
+            //_serialPort.WriteTimeout = 1500;
+
+            _serialPort.ReadTimeout = 3500;
+            _serialPort.WriteTimeout = 4500;
 
             _serialPort.Open();
             _continue = true;
             readThread.Start();
 
-            while (_continue)
-            {
-                count++;
-                //message = Console.ReadLine();
-                // message = "Not at all";//json
-                // _serialPort.WriteLine(message.ToString());
-                if (count == 10)
-                    _serialPort.WriteLine(message);
-                // Console.WriteLine(message + "!!");
-                if (count == 11)
-                {
-                    count = 0;
-                }
-            }
+            //Send(message);
 
-            readThread.Join();
-            _serialPort.Close();
+            //while (_continue)
+            //{
+            //    count++;
+            //    //message = Console.ReadLine();
+            //    // message = "Not at all";//json
+            //    // _serialPort.WriteLine(message.ToString());
+            //    if (count == 10)
+            //        _serialPort.WriteLine(message);
+            //    // Console.WriteLine(message + "!!");
+            //    if (count == 11)
+            //    {
+            //        count = 0;
+            //    }
+            //}
+
+           
+            
+        }
+
+        public static void Send(string msg)
+        {
+            
+            if(msg != null && _serialPort != null)
+            {
+                try
+                {
+                    _serialPort.WriteLine(msg);
+                }
+                catch(Exception e)
+                {
+                    Console.WriteLine(e.ToString());
+                   
+                }
+               
+            }
+        }
+
+        public static void Quit()
+        {
+            if(_serialPort != null)
+            {
+                _serialPort.Close();
+                readThread.Join();
+            }
+            
         }
 
         public static void Read()
@@ -65,12 +106,13 @@ namespace DF_FaceTracking.cs
             {
                 try
                 {
-                    if (_serialPort.ReadLine().Equals("Notatall"))
-                    {
-                        Console.WriteLine("received");
-                    }
-
-                    //string message = _serialPort.ReadLine();
+                    //if (_serialPort.ReadLine().Equals("Notatall"))
+                    //{
+                    //    Console.WriteLine("received");
+                    //}
+                    Console.WriteLine("begin write");
+                    string temp = _serialPort.ReadLine();
+                    Console.WriteLine(temp);
 
                 }
                 catch (TimeoutException te) { Console.WriteLine(te.ToString()); }
@@ -88,7 +130,7 @@ namespace DF_FaceTracking.cs
                 Console.WriteLine("   {0}", s);
             }
 
-            Console.Write("Enter COM port value (Default: {0}): ", defaultPortName);
+            //Console.Write("Enter COM port value (Default: {0}): ", defaultPortName);
             //portName = Console.ReadLine();
 
             //if (portName == "" || !(portName.ToLower()).StartsWith("com"))
@@ -127,14 +169,15 @@ namespace DF_FaceTracking.cs
                 Console.WriteLine("   {0}", s);
             }
 
-            Console.Write("Enter Parity value (Default: {0}):", defaultPortParity.ToString(), true);
+            // Console.Write("Enter Parity value (Default: {0}):", defaultPortParity.ToString(), true);
             //parity = Console.ReadLine();
 
             //if (parity == "")
             //{
             //    parity = defaultPortParity.ToString();
             //}
-            parity = defaultPortParity.ToString();
+            parity = "None";
+            //parity = defaultPortParity.ToString();
 
             return (Parity)Enum.Parse(typeof(Parity), parity, true);
         }
@@ -160,11 +203,11 @@ namespace DF_FaceTracking.cs
         {
             string stopBits;
 
-            //Console.WriteLine("Available StopBits options:");
-            //foreach (string s in Enum.GetNames(typeof(StopBits)))
-            //{
-            //    Console.WriteLine("   {0}", s);
-            //}
+            Console.WriteLine("Available StopBits options:");
+            foreach (string s in Enum.GetNames(typeof(StopBits)))
+            {
+                Console.WriteLine("   {0}", s);
+            }
 
             //Console.Write("Enter StopBits value (None is not supported and \n" +
             // "raises an ArgumentOutOfRangeException. \n (Default: {0}):", defaultPortStopBits.ToString());
@@ -175,7 +218,8 @@ namespace DF_FaceTracking.cs
             //    stopBits = defaultPortStopBits.ToString();
             //}
 
-            stopBits = defaultPortStopBits.ToString();
+            stopBits = "One";
+            //stopBits = defaultPortStopBits.ToString();
             return (StopBits)Enum.Parse(typeof(StopBits), stopBits, true);
         }
         public static Handshake SetPortHandshake(Handshake defaultPortHandshake)

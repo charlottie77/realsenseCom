@@ -28,10 +28,12 @@ namespace DF_FaceTracking.cs
             PXCMSession session = PXCMSession.CreateInstance();
             if (session != null)
             {
+                PortChat.start();
                 Application.Run(new MainForm(session));
+                
                 session.Dispose();
             }
-            //PortChat.start();
+            
         }
     }
 }

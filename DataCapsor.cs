@@ -114,7 +114,7 @@ namespace DF_FaceTracking.cs
             PulseData fPulse = face.QueryPulse();
             if(fPulse != null)
             {
-                Console.WriteLine("pulsed");
+                //Console.WriteLine("pulsed");
                 heartRate = fPulse.QueryHeartRate();
             }
             

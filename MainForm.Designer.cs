@@ -65,9 +65,10 @@
             // Start
             // 
             this.Start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Start.Location = new System.Drawing.Point(820, 225);
+            this.Start.Location = new System.Drawing.Point(1230, 312);
+            this.Start.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Start.Name = "Start";
-            this.Start.Size = new System.Drawing.Size(80, 23);
+            this.Start.Size = new System.Drawing.Size(120, 32);
             this.Start.TabIndex = 2;
             this.Start.Text = "Start";
             this.Start.UseVisualStyleBackColor = true;
@@ -77,9 +78,10 @@
             // 
             this.Stop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Stop.Enabled = false;
-            this.Stop.Location = new System.Drawing.Point(820, 254);
+            this.Stop.Location = new System.Drawing.Point(1230, 352);
+            this.Stop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Stop.Name = "Stop";
-            this.Stop.Size = new System.Drawing.Size(80, 23);
+            this.Stop.Size = new System.Drawing.Size(120, 32);
             this.Stop.TabIndex = 3;
             this.Stop.Text = "Stop";
             this.Stop.UseVisualStyleBackColor = true;
@@ -88,17 +90,18 @@
             // sourceToolStripMenuItem
             // 
             this.sourceToolStripMenuItem.Name = "sourceToolStripMenuItem";
-            this.sourceToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.sourceToolStripMenuItem.Size = new System.Drawing.Size(79, 28);
             this.sourceToolStripMenuItem.Text = "Device";
             // 
             // moduleToolStripMenuItem
             // 
             this.moduleToolStripMenuItem.Name = "moduleToolStripMenuItem";
-            this.moduleToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.moduleToolStripMenuItem.Size = new System.Drawing.Size(89, 28);
             this.moduleToolStripMenuItem.Text = "Module";
             // 
             // MainMenu
             // 
+            this.MainMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sourceToolStripMenuItem,
             this.colorResolutionToolStripMenuItem,
@@ -107,21 +110,22 @@
             this.modeToolStripMenuItem});
             this.MainMenu.Location = new System.Drawing.Point(0, 0);
             this.MainMenu.Name = "MainMenu";
+            this.MainMenu.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
             this.MainMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.MainMenu.Size = new System.Drawing.Size(941, 24);
+            this.MainMenu.Size = new System.Drawing.Size(1412, 34);
             this.MainMenu.TabIndex = 0;
             this.MainMenu.Text = "MainMenu";
             // 
             // colorResolutionToolStripMenuItem
             // 
             this.colorResolutionToolStripMenuItem.Name = "colorResolutionToolStripMenuItem";
-            this.colorResolutionToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.colorResolutionToolStripMenuItem.Size = new System.Drawing.Size(68, 28);
             this.colorResolutionToolStripMenuItem.Text = "Color";
             // 
             // ProfileToolStripMenuItem
             // 
             this.ProfileToolStripMenuItem.Name = "ProfileToolStripMenuItem";
-            this.ProfileToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ProfileToolStripMenuItem.Size = new System.Drawing.Size(77, 28);
             this.ProfileToolStripMenuItem.Text = "Profile";
             // 
             // modeToolStripMenuItem
@@ -131,7 +135,7 @@
             this.Playback,
             this.Record});
             this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
-            this.modeToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.modeToolStripMenuItem.Size = new System.Drawing.Size(73, 28);
             this.modeToolStripMenuItem.Text = "Mode";
             // 
             // Live
@@ -139,33 +143,35 @@
             this.Live.Checked = true;
             this.Live.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Live.Name = "Live";
-            this.Live.Size = new System.Drawing.Size(121, 22);
+            this.Live.Size = new System.Drawing.Size(170, 30);
             this.Live.Text = "Live";
             this.Live.Click += new System.EventHandler(this.Live_Click);
             // 
             // Playback
             // 
             this.Playback.Name = "Playback";
-            this.Playback.Size = new System.Drawing.Size(121, 22);
+            this.Playback.Size = new System.Drawing.Size(170, 30);
             this.Playback.Text = "Playback";
             this.Playback.Click += new System.EventHandler(this.Playback_Click);
             // 
             // Record
             // 
             this.Record.Name = "Record";
-            this.Record.Size = new System.Drawing.Size(121, 22);
+            this.Record.Size = new System.Drawing.Size(170, 30);
             this.Record.Text = "Record";
             this.Record.Click += new System.EventHandler(this.Record_Click);
             // 
             // Status2
             // 
+            this.Status2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.Status2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StatusLabel,
             this.AlertsLabel});
             this.Status2.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.Status2.Location = new System.Drawing.Point(0, 481);
+            this.Status2.Location = new System.Drawing.Point(0, 665);
             this.Status2.Name = "Status2";
-            this.Status2.Size = new System.Drawing.Size(941, 20);
+            this.Status2.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.Status2.Size = new System.Drawing.Size(1412, 29);
             this.Status2.TabIndex = 25;
             this.Status2.Text = "Status2";
             // 
@@ -173,7 +179,7 @@
             // 
             this.StatusLabel.Name = "StatusLabel";
             this.StatusLabel.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
-            this.StatusLabel.Size = new System.Drawing.Size(73, 15);
+            this.StatusLabel.Size = new System.Drawing.Size(86, 24);
             this.StatusLabel.Text = "OK";
             this.StatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -190,9 +196,10 @@
             this.Scale.AutoSize = true;
             this.Scale.Checked = true;
             this.Scale.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.Scale.Location = new System.Drawing.Point(820, 27);
+            this.Scale.Location = new System.Drawing.Point(1231, 37);
+            this.Scale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Scale.Name = "Scale";
-            this.Scale.Size = new System.Drawing.Size(53, 17);
+            this.Scale.Size = new System.Drawing.Size(79, 22);
             this.Scale.TabIndex = 26;
             this.Scale.Text = "Scale";
             this.Scale.UseVisualStyleBackColor = true;
@@ -205,9 +212,10 @@
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Panel2.ErrorImage = null;
             this.Panel2.InitialImage = null;
-            this.Panel2.Location = new System.Drawing.Point(12, 27);
+            this.Panel2.Location = new System.Drawing.Point(18, 37);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(802, 444);
+            this.Panel2.Size = new System.Drawing.Size(1201, 613);
             this.Panel2.TabIndex = 27;
             this.Panel2.TabStop = false;
             this.Panel2.Click += new System.EventHandler(this.Panel2_Click);
@@ -216,9 +224,10 @@
             // 
             this.Recognition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Recognition.AutoSize = true;
-            this.Recognition.Location = new System.Drawing.Point(820, 188);
+            this.Recognition.Location = new System.Drawing.Point(1221, 260);
+            this.Recognition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Recognition.Name = "Recognition";
-            this.Recognition.Size = new System.Drawing.Size(83, 17);
+            this.Recognition.Size = new System.Drawing.Size(133, 22);
             this.Recognition.TabIndex = 33;
             this.Recognition.Text = "Recognition";
             this.Recognition.UseVisualStyleBackColor = true;
@@ -227,9 +236,10 @@
             // 
             this.RegisterUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RegisterUser.Enabled = false;
-            this.RegisterUser.Location = new System.Drawing.Point(820, 283);
+            this.RegisterUser.Location = new System.Drawing.Point(1230, 392);
+            this.RegisterUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.RegisterUser.Name = "RegisterUser";
-            this.RegisterUser.Size = new System.Drawing.Size(80, 23);
+            this.RegisterUser.Size = new System.Drawing.Size(120, 32);
             this.RegisterUser.TabIndex = 34;
             this.RegisterUser.Text = "Register";
             this.RegisterUser.UseVisualStyleBackColor = true;
@@ -239,9 +249,10 @@
             // 
             this.UnregisterUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.UnregisterUser.Enabled = false;
-            this.UnregisterUser.Location = new System.Drawing.Point(820, 312);
+            this.UnregisterUser.Location = new System.Drawing.Point(1230, 432);
+            this.UnregisterUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.UnregisterUser.Name = "UnregisterUser";
-            this.UnregisterUser.Size = new System.Drawing.Size(80, 23);
+            this.UnregisterUser.Size = new System.Drawing.Size(120, 32);
             this.UnregisterUser.TabIndex = 35;
             this.UnregisterUser.Text = "Unregister";
             this.UnregisterUser.UseVisualStyleBackColor = true;
@@ -251,42 +262,47 @@
             // 
             this.NumDetectionText.AccessibleName = "";
             this.NumDetectionText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NumDetectionText.Location = new System.Drawing.Point(906, 73);
+            this.NumDetectionText.Location = new System.Drawing.Point(1359, 101);
+            this.NumDetectionText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NumDetectionText.Name = "NumDetectionText";
-            this.NumDetectionText.Size = new System.Drawing.Size(21, 20);
+            this.NumDetectionText.Size = new System.Drawing.Size(30, 28);
             this.NumDetectionText.TabIndex = 36;
             // 
             // NumLandmarksText
             // 
             this.NumLandmarksText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NumLandmarksText.Location = new System.Drawing.Point(906, 96);
+            this.NumLandmarksText.Location = new System.Drawing.Point(1359, 133);
+            this.NumLandmarksText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NumLandmarksText.Name = "NumLandmarksText";
-            this.NumLandmarksText.Size = new System.Drawing.Size(21, 20);
+            this.NumLandmarksText.Size = new System.Drawing.Size(30, 28);
             this.NumLandmarksText.TabIndex = 37;
             // 
             // NumPoseText
             // 
             this.NumPoseText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NumPoseText.Location = new System.Drawing.Point(906, 119);
+            this.NumPoseText.Location = new System.Drawing.Point(1359, 165);
+            this.NumPoseText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NumPoseText.Name = "NumPoseText";
-            this.NumPoseText.Size = new System.Drawing.Size(21, 20);
+            this.NumPoseText.Size = new System.Drawing.Size(30, 28);
             this.NumPoseText.TabIndex = 38;
             // 
             // NumExpressionsText
             // 
             this.NumExpressionsText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NumExpressionsText.Location = new System.Drawing.Point(906, 142);
+            this.NumExpressionsText.Location = new System.Drawing.Point(1359, 197);
+            this.NumExpressionsText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NumExpressionsText.Name = "NumExpressionsText";
-            this.NumExpressionsText.Size = new System.Drawing.Size(21, 20);
+            this.NumExpressionsText.Size = new System.Drawing.Size(30, 28);
             this.NumExpressionsText.TabIndex = 45;
             // 
             // Detection
             // 
             this.Detection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Detection.AutoSize = true;
-            this.Detection.Location = new System.Drawing.Point(820, 73);
+            this.Detection.Location = new System.Drawing.Point(1223, 101);
+            this.Detection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Detection.Name = "Detection";
-            this.Detection.Size = new System.Drawing.Size(72, 17);
+            this.Detection.Size = new System.Drawing.Size(115, 22);
             this.Detection.TabIndex = 46;
             this.Detection.Text = "Detection";
             this.Detection.UseVisualStyleBackColor = true;
@@ -295,9 +311,10 @@
             // 
             this.Landmarks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Landmarks.AutoSize = true;
-            this.Landmarks.Location = new System.Drawing.Point(820, 96);
+            this.Landmarks.Location = new System.Drawing.Point(1232, 133);
+            this.Landmarks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Landmarks.Name = "Landmarks";
-            this.Landmarks.Size = new System.Drawing.Size(78, 17);
+            this.Landmarks.Size = new System.Drawing.Size(115, 22);
             this.Landmarks.TabIndex = 47;
             this.Landmarks.Text = "Landmarks";
             this.Landmarks.UseVisualStyleBackColor = true;
@@ -306,9 +323,10 @@
             // 
             this.Pose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pose.AutoSize = true;
-            this.Pose.Location = new System.Drawing.Point(820, 119);
+            this.Pose.Location = new System.Drawing.Point(1235, 165);
+            this.Pose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Pose.Name = "Pose";
-            this.Pose.Size = new System.Drawing.Size(50, 17);
+            this.Pose.Size = new System.Drawing.Size(70, 22);
             this.Pose.TabIndex = 48;
             this.Pose.Text = "Pose";
             this.Pose.UseVisualStyleBackColor = true;
@@ -317,9 +335,10 @@
             // 
             this.Expressions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Expressions.AutoSize = true;
-            this.Expressions.Location = new System.Drawing.Point(820, 142);
+            this.Expressions.Location = new System.Drawing.Point(1220, 197);
+            this.Expressions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Expressions.Name = "Expressions";
-            this.Expressions.Size = new System.Drawing.Size(82, 17);
+            this.Expressions.Size = new System.Drawing.Size(133, 22);
             this.Expressions.TabIndex = 49;
             this.Expressions.Text = "Expressions";
             this.Expressions.UseVisualStyleBackColor = true;
@@ -328,9 +347,10 @@
             // 
             this.Pulse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pulse.AutoSize = true;
-            this.Pulse.Location = new System.Drawing.Point(820, 165);
+            this.Pulse.Location = new System.Drawing.Point(1229, 228);
+            this.Pulse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Pulse.Name = "Pulse";
-            this.Pulse.Size = new System.Drawing.Size(52, 17);
+            this.Pulse.Size = new System.Drawing.Size(79, 22);
             this.Pulse.TabIndex = 51;
             this.Pulse.Text = "Pulse";
             this.Pulse.UseVisualStyleBackColor = true;
@@ -338,17 +358,18 @@
             // NumPulseText
             // 
             this.NumPulseText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NumPulseText.Location = new System.Drawing.Point(906, 165);
+            this.NumPulseText.Location = new System.Drawing.Point(1359, 228);
+            this.NumPulseText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NumPulseText.Name = "NumPulseText";
-            this.NumPulseText.Size = new System.Drawing.Size(21, 20);
+            this.NumPulseText.Size = new System.Drawing.Size(30, 28);
             this.NumPulseText.TabIndex = 52;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(941, 501);
+            this.ClientSize = new System.Drawing.Size(1412, 694);
             this.Controls.Add(this.NumPulseText);
             this.Controls.Add(this.Pulse);
             this.Controls.Add(this.Expressions);
@@ -369,9 +390,11 @@
             this.Controls.Add(this.Start);
             this.Controls.Add(this.MainMenu);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Intel(R) RealSense(TM) SDK: Face Tracking";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.Status2.ResumeLayout(false);

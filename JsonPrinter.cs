@@ -12,7 +12,12 @@ namespace DF_FaceTracking.cs
         public void JsonPrint(DataCapsor dc)
         {
             string output = JsonConvert.SerializeObject(dc);
-            Console.WriteLine(output);
+            //Console.WriteLine(output);
+        }
+        public string getString(DataCapsor dc)
+        {
+            string output = JsonConvert.SerializeObject(dc);
+            return output;
         }
     }
 }

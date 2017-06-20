@@ -764,7 +764,8 @@ namespace DF_FaceTracking.cs
                     m_faceTextOrganizer.ChangeFace(i, face, m_bitmap.Height, m_bitmap.Width);
                     dataCapsor.intergrateData(i, face);
                     jPrinter.JsonPrint(dataCapsor);
-
+                    string send = jPrinter.getString(dataCapsor) + "\n";
+                    PortChat.Send(send);
                 }
 
                 DrawLocation(face);
@@ -1254,6 +1255,11 @@ namespace DF_FaceTracking.cs
         private void Panel2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
