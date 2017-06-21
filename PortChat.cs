@@ -13,6 +13,7 @@ namespace DF_FaceTracking.cs
         static SerialPort _serialPort;
         static int count = 0;
         public static Thread readThread = new Thread(Read);
+        static bool inuse = false;
 
         public static void start()
         {
@@ -44,8 +45,8 @@ namespace DF_FaceTracking.cs
            // _serialPort.ReadTimeout = 2500;
             //_serialPort.WriteTimeout = 1500;
 
-            _serialPort.ReadTimeout = 3500;
-            _serialPort.WriteTimeout = 4500;
+            _serialPort.ReadTimeout = 4000;
+            _serialPort.WriteTimeout = 3500;
 
             _serialPort.Open();
             _continue = true;
@@ -66,23 +67,22 @@ namespace DF_FaceTracking.cs
             //    {
             //        count = 0;
             //    }
-            //}
-
-           
-            
+            //}       
         }
 
         public static void Send(string msg)
         {
             
-            if(msg != null && _serialPort != null)
+            if(msg != null && _serialPort != null && !inuse)
             {
                 try
                 {
+                    inuse = true;
                     _serialPort.WriteLine(msg);
                 }
                 catch(Exception e)
                 {
+                    inuse = false;
                     Console.WriteLine(e.ToString());
                    
                 }
@@ -113,6 +113,7 @@ namespace DF_FaceTracking.cs
                     Console.WriteLine("begin write");
                     string temp = _serialPort.ReadLine();
                     Console.WriteLine(temp);
+                    inuse = false;
 
                 }
                 catch (TimeoutException te) { Console.WriteLine(te.ToString()); }
