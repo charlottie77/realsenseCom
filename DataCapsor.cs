@@ -13,18 +13,20 @@ namespace DF_FaceTracking.cs
         public Face _face;
         //public int _index;
         //face detection data
-        public int box_x;
-        public int box_y, box_w, box_h;
-        public Single averageDepth;
+        //public int box_x;
+        //public int box_y, box_w, box_h;
+        //public Single averageDepth;
 
         //face pose data
-        public Single headCenter_x, headCenter_y, headCenter_z;
+        // public Single headCenter_x, headCenter_y, headCenter_z;
         //public int pos_confi;
         //public Single yaw, pitch, roll;
         //public Single pose_q_x, pose_q_y, pose_q_z, pose_q_w;
 
         //face expression data
         //public Dictionary<string, int> expressions = new Dictionary<string, int>();
+        public int tongue;
+        public int kiss;
 
         //face pulse data
         //public float heartRate;
@@ -53,20 +55,20 @@ namespace DF_FaceTracking.cs
             GazeData fGaze = face.QueryGaze();
 
             fDetection.QueryBoundingRect(out box_rect);
-            box_x = box_rect.x;
-            box_y = box_rect.y;
-            box_w = box_rect.w;
-            box_h = box_rect.h;
+            //box_x = box_rect.x;
+            //box_y = box_rect.y;
+            //box_w = box_rect.w;
+            //box_h = box_rect.h;
 
             //query average depth
-            fDetection.QueryFaceAverageDepth(out averageDepth);
+            //fDetection.QueryFaceAverageDepth(out averageDepth);
 
             //query head position
-            HeadPosition hp;
-            fPose.QueryHeadPosition(out hp);
-            headCenter_x = hp.headCenter.x;
-            headCenter_y = hp.headCenter.y;
-            headCenter_z = hp.headCenter.z;
+            //HeadPosition hp;
+            //fPose.QueryHeadPosition(out hp);
+            //headCenter_x = hp.headCenter.x;
+            //headCenter_y = hp.headCenter.y;
+            //headCenter_z = hp.headCenter.z;
 
             //query pose confidence
             //pos_confi = fPose.QueryConfidence();
@@ -89,28 +91,34 @@ namespace DF_FaceTracking.cs
             //query expression data
             Type expressionType = typeof(FaceExpression);
             FaceExpressionResult fer = new FaceExpressionResult();
+            fExpression.QueryExpression(ExpressionsData.FaceExpression.EXPRESSION_TONGUE_OUT, out fer);
+            tongue = fer.intensity;
 
-            foreach(string s in Enum.GetNames(expressionType))
-            {
+            fExpression.QueryExpression(ExpressionsData.FaceExpression.EXPRESSION_KISS, out fer);
+            kiss = fer.intensity;
+
+
+            //foreach (string s in Enum.GetNames(expressionType))
+            //{
                
-                FaceExpression typeIndex = (FaceExpression)Enum.Parse(expressionType, s);
-                //fExpression.QueryExpression(ExpressionsData.FaceExpression.EXPRESSION_BROW_LOWERER_LEFT, out fer);
-                fExpression.QueryExpression(typeIndex, out fer);
-               // Console.WriteLine(s + ".." + fer.intensity);
+            //    FaceExpression typeIndex = (FaceExpression)Enum.Parse(expressionType, s);
+            //    //fExpression.QueryExpression(ExpressionsData.FaceExpression.EXPRESSION_BROW_LOWERER_LEFT, out fer);
+            //    fExpression.QueryExpression(typeIndex, out fer);
+            //    // Console.WriteLine(s + ".." + fer.intensity);
 
-                //int value;
-                //if (expressions.TryGetValue(s, out value))
-                //{
-                //    //modify
-                //    expressions[s] = fer.intensity;
-                //}
-                //else
-                //{
-                //    //add
-                //    expressions.Add(s, fer.intensity);
-                //}
-                
-            }
+            //    //int value;
+            //    //if (expressions.TryGetValue(s, out value))
+            //    //{
+            //    //    //modify
+            //    //    expressions[s] = fer.intensity;
+            //    //}
+            //    //else
+            //    //{
+            //    //    //add
+            //    //    expressions.Add(s, fer.intensity);
+            //    //}
+
+            //}
             //query pulse 
             PulseData fPulse = face.QueryPulse();
             //if(fPulse != null)

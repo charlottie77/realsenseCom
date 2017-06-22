@@ -11,7 +11,7 @@ namespace DF_FaceTracking.cs
     {
         static bool _continue;
         static SerialPort _serialPort;
-        static int count = 0;
+        //static int count = 0;
         public static Thread readThread = new Thread(Read);
         static bool inuse = false;
 

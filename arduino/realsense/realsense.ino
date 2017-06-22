@@ -30,9 +30,10 @@ void loop() {
         json = "";
         return;
       }
-      int box_x = root["headCenter_x"];
+      
+      int box_x = root["kiss"];
       Serial.println(box_x);
-      if(box_x >100)
+      if(box_x > 50)
       {
          digitalWrite(13, HIGH);
       }
@@ -43,7 +44,7 @@ void loop() {
     else
     {
       json += char(t);
-      digitalWrite(13, LOW);
+      //digitalWrite(13, LOW);
       //delay(2);
     }
     
