@@ -66,7 +66,7 @@
             // 
             this.Start.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Start.Location = new System.Drawing.Point(1230, 312);
-            this.Start.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Start.Margin = new System.Windows.Forms.Padding(4);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(120, 32);
             this.Start.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.Stop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Stop.Enabled = false;
             this.Stop.Location = new System.Drawing.Point(1230, 352);
-            this.Stop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Stop.Margin = new System.Windows.Forms.Padding(4);
             this.Stop.Name = "Stop";
             this.Stop.Size = new System.Drawing.Size(120, 32);
             this.Stop.TabIndex = 3;
@@ -197,7 +197,7 @@
             this.Scale.Checked = true;
             this.Scale.CheckState = System.Windows.Forms.CheckState.Checked;
             this.Scale.Location = new System.Drawing.Point(1231, 37);
-            this.Scale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Scale.Margin = new System.Windows.Forms.Padding(4);
             this.Scale.Name = "Scale";
             this.Scale.Size = new System.Drawing.Size(79, 22);
             this.Scale.TabIndex = 26;
@@ -213,7 +213,7 @@
             this.Panel2.ErrorImage = null;
             this.Panel2.InitialImage = null;
             this.Panel2.Location = new System.Drawing.Point(18, 37);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(1201, 613);
             this.Panel2.TabIndex = 27;
@@ -225,7 +225,7 @@
             this.Recognition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Recognition.AutoSize = true;
             this.Recognition.Location = new System.Drawing.Point(1221, 260);
-            this.Recognition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Recognition.Margin = new System.Windows.Forms.Padding(4);
             this.Recognition.Name = "Recognition";
             this.Recognition.Size = new System.Drawing.Size(133, 22);
             this.Recognition.TabIndex = 33;
@@ -237,7 +237,7 @@
             this.RegisterUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RegisterUser.Enabled = false;
             this.RegisterUser.Location = new System.Drawing.Point(1230, 392);
-            this.RegisterUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RegisterUser.Margin = new System.Windows.Forms.Padding(4);
             this.RegisterUser.Name = "RegisterUser";
             this.RegisterUser.Size = new System.Drawing.Size(120, 32);
             this.RegisterUser.TabIndex = 34;
@@ -250,7 +250,7 @@
             this.UnregisterUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.UnregisterUser.Enabled = false;
             this.UnregisterUser.Location = new System.Drawing.Point(1230, 432);
-            this.UnregisterUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UnregisterUser.Margin = new System.Windows.Forms.Padding(4);
             this.UnregisterUser.Name = "UnregisterUser";
             this.UnregisterUser.Size = new System.Drawing.Size(120, 32);
             this.UnregisterUser.TabIndex = 35;
@@ -263,7 +263,7 @@
             this.NumDetectionText.AccessibleName = "";
             this.NumDetectionText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NumDetectionText.Location = new System.Drawing.Point(1359, 101);
-            this.NumDetectionText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NumDetectionText.Margin = new System.Windows.Forms.Padding(4);
             this.NumDetectionText.Name = "NumDetectionText";
             this.NumDetectionText.Size = new System.Drawing.Size(30, 28);
             this.NumDetectionText.TabIndex = 36;
@@ -272,7 +272,7 @@
             // 
             this.NumLandmarksText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NumLandmarksText.Location = new System.Drawing.Point(1359, 133);
-            this.NumLandmarksText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NumLandmarksText.Margin = new System.Windows.Forms.Padding(4);
             this.NumLandmarksText.Name = "NumLandmarksText";
             this.NumLandmarksText.Size = new System.Drawing.Size(30, 28);
             this.NumLandmarksText.TabIndex = 37;
@@ -281,7 +281,7 @@
             // 
             this.NumPoseText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NumPoseText.Location = new System.Drawing.Point(1359, 165);
-            this.NumPoseText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NumPoseText.Margin = new System.Windows.Forms.Padding(4);
             this.NumPoseText.Name = "NumPoseText";
             this.NumPoseText.Size = new System.Drawing.Size(30, 28);
             this.NumPoseText.TabIndex = 38;
@@ -290,7 +290,7 @@
             // 
             this.NumExpressionsText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NumExpressionsText.Location = new System.Drawing.Point(1359, 197);
-            this.NumExpressionsText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NumExpressionsText.Margin = new System.Windows.Forms.Padding(4);
             this.NumExpressionsText.Name = "NumExpressionsText";
             this.NumExpressionsText.Size = new System.Drawing.Size(30, 28);
             this.NumExpressionsText.TabIndex = 45;
@@ -300,7 +300,7 @@
             this.Detection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Detection.AutoSize = true;
             this.Detection.Location = new System.Drawing.Point(1223, 101);
-            this.Detection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Detection.Margin = new System.Windows.Forms.Padding(4);
             this.Detection.Name = "Detection";
             this.Detection.Size = new System.Drawing.Size(115, 22);
             this.Detection.TabIndex = 46;
@@ -312,7 +312,7 @@
             this.Landmarks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Landmarks.AutoSize = true;
             this.Landmarks.Location = new System.Drawing.Point(1232, 133);
-            this.Landmarks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Landmarks.Margin = new System.Windows.Forms.Padding(4);
             this.Landmarks.Name = "Landmarks";
             this.Landmarks.Size = new System.Drawing.Size(115, 22);
             this.Landmarks.TabIndex = 47;
@@ -324,7 +324,7 @@
             this.Pose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pose.AutoSize = true;
             this.Pose.Location = new System.Drawing.Point(1235, 165);
-            this.Pose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pose.Margin = new System.Windows.Forms.Padding(4);
             this.Pose.Name = "Pose";
             this.Pose.Size = new System.Drawing.Size(70, 22);
             this.Pose.TabIndex = 48;
@@ -336,7 +336,7 @@
             this.Expressions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Expressions.AutoSize = true;
             this.Expressions.Location = new System.Drawing.Point(1220, 197);
-            this.Expressions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Expressions.Margin = new System.Windows.Forms.Padding(4);
             this.Expressions.Name = "Expressions";
             this.Expressions.Size = new System.Drawing.Size(133, 22);
             this.Expressions.TabIndex = 49;
@@ -348,7 +348,7 @@
             this.Pulse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Pulse.AutoSize = true;
             this.Pulse.Location = new System.Drawing.Point(1229, 228);
-            this.Pulse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pulse.Margin = new System.Windows.Forms.Padding(4);
             this.Pulse.Name = "Pulse";
             this.Pulse.Size = new System.Drawing.Size(79, 22);
             this.Pulse.TabIndex = 51;
@@ -359,7 +359,7 @@
             // 
             this.NumPulseText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.NumPulseText.Location = new System.Drawing.Point(1359, 228);
-            this.NumPulseText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NumPulseText.Margin = new System.Windows.Forms.Padding(4);
             this.NumPulseText.Name = "NumPulseText";
             this.NumPulseText.Size = new System.Drawing.Size(30, 28);
             this.NumPulseText.TabIndex = 52;
@@ -390,7 +390,7 @@
             this.Controls.Add(this.Start);
             this.Controls.Add(this.MainMenu);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Intel(R) RealSense(TM) SDK: Face Tracking";

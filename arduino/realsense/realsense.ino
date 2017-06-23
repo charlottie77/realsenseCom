@@ -2,6 +2,7 @@
 
 void setup() {
   // put your setup code here, to run once:
+  pinMode(LED_BUILTIN, OUTPUT);
   Serial.begin(9600);
  
   
@@ -28,14 +29,21 @@ void loop() {
         //Serial.println("parse failed");
         temp = "";
         json = "";
-        return;
+        //return;
       }
       
       int box_x = root["kiss"];
       Serial.println(box_x);
+      
       if(box_x > 50)
       {
-         digitalWrite(13, HIGH);
+         digitalWrite(LED_BUILTIN, HIGH); 
+         delay(500);
+         box_x = 0;   
+      }
+      else
+      {
+        digitalWrite(LED_BUILTIN, LOW);
       }
      
       temp = "";

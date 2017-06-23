@@ -27,7 +27,7 @@ namespace DF_FaceTracking.cs
             _serialPort = new SerialPort();
 
             //Allow the user to set the appropriate properties.
-            _serialPort.PortName = SetPortName("COM7");
+            _serialPort.PortName = SetPortName("COM9");
             _serialPort.BaudRate = SetPortBaudRate(9600);
             _serialPort.Parity = SetPortParity(_serialPort.Parity);
             _serialPort.DataBits = SetPortDataBits(8);
